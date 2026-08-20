@@ -1,222 +1,151 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Shiviadangency</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap" rel="stylesheet">
 <style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
-
+*{box-sizing:border-box;margin:0;padding:0;}
 body{
-background:#0f172a;
-display:flex;
-justify-content:center;
-align-items:center;
-min-height:100vh;
-color:#fff;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 16px;
+  font-family: 'Poppins', sans-serif;
 }
-
-/* CARD */
-
-.container{
-width:95%;
-max-width:420px;
-padding:30px 25px;
-border-radius:18px;
-
-background:rgba(255,255,255,0.05);
-backdrop-filter:blur(12px);
-
-border:1px solid rgba(255,255,255,0.08);
-
-box-shadow:0 20px 60px rgba(0,0,0,0.6);
-text-align:center;
+.card{
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 24px;
+  max-width: 480px;
+  width: 100%;
+  padding: 36px 28px 28px;
+  text-align: center;
+  backdrop-filter: blur(10px);
 }
-
-/* LOGO */
-
-.logo{
-width:80px;
-height:80px;
-border-radius:50%;
-border:2px solid #FFD700;
-margin-bottom:12px;
+.avatar{
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 3px solid #4ade80;
+  margin: 0 auto 14px;
+  overflow: hidden;
 }
-
-/* TEXT */
-
-h1{
-font-size:22px;
-color:#FFD700;
-margin-bottom:6px;
+.avatar img{width:100%;height:100%;object-fit:cover;}
+.badge{
+  display: inline-block;
+  background: rgba(74,222,128,0.15);
+  color: #4ade80;
+  border: 1px solid rgba(74,222,128,0.3);
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
 }
-
-h2{
-font-size:15px;
-opacity:0.9;
-margin-bottom:10px;
+.headline{
+  color: #fff;
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 6px;
 }
-
-.sub{
-font-size:13px;
-opacity:0.7;
-margin-bottom:18px;
+.subhead{
+  color: rgba(255,255,255,0.55);
+  font-size: 13px;
+  margin-bottom: 22px;
 }
-
-/* BUTTON */
-
+.features{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 24px;
+  text-align: left;
+}
+.feat{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 10px;
+  padding: 10px 14px;
+}
+.tick{
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(74,222,128,0.2);
+  border: 1px solid rgba(74,222,128,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #4ade80;
+  font-size: 13px;
+  font-weight: 900;
+}
+.feat p{
+  color: rgba(255,255,255,0.85);
+  font-size: 13px;
+  line-height: 1.4;
+  font-weight: 500;
+}
+@keyframes pulse{
+  0%{box-shadow:0 0 0 0 rgba(11,110,184,0.6);}
+  70%{box-shadow:0 0 0 14px rgba(11,110,184,0);}
+  100%{box-shadow:0 0 0 0 rgba(11,110,184,0);}
+}
 .btn{
-display:block;
-text-decoration:none;
-background:#22c55e;
-color:#000;
-font-weight:700;
-padding:16px;
-border-radius:10px;
-margin:12px 0;
-transition:0.3s;
+  display: block;
+  background: linear-gradient(90deg, #0b6eb8, #1a90e0);
+  color: #fff !important;
+  font-size: 16px;
+  font-weight: 800;
+  border-radius: 50px;
+  padding: 17px 24px;
+  text-decoration: none !important;
+  animation: pulse 2s infinite;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 20px;
+  letter-spacing: 0.3px;
 }
-
-.btn:hover{
-background:#16a34a;
-transform:scale(1.03);
+.btn:hover{background: linear-gradient(90deg, #095c9d, #1278c0);}
+.divider{
+  border: none;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  margin: 4px 0 16px;
 }
-
-/* TRUST BOX */
-
-.trust{
-background:rgba(0,255,150,0.08);
-padding:10px;
-border-radius:10px;
-font-size:13px;
-margin-bottom:15px;
-border:1px solid rgba(0,255,150,0.2);
+.disclaimer{
+  font-size: 11px;
+  color: #ffffff;
+  line-height: 1.7;
+  font-weight: 500;
 }
-
-/* LIST */
-
-.points{
-list-style:none;
-font-size:14px;
-text-align:left;
-margin:15px 0;
+.disclaimer b{color: #4ade80;}
+.adrank{
+  margin-top: 10px;
+  font-size: 11px;
+  color: #ffffff;
+  line-height: 1.7;
+  font-weight: 500;
 }
-
-.points li{
-margin:8px 0;
+.adrank a{
+  color: #4ade80;
+  text-decoration: none;
+  font-weight: 700;
 }
-
-/* URGENCY */
-
-.timer{
-margin-top:10px;
-font-size:13px;
-color:#facc15;
-}
-
-/* SOCIAL PROOF */
-
-.proof{
-margin-top:12px;
-font-size:12px;
-opacity:0.7;
-}
-
-/* FOOTER BRAND */
-
-.footer{
-margin-top:20px;
-font-size:12px;
-opacity:0.6;
-}
-
-.footer a{
-color:#38bdf8;
-text-decoration:none;
-font-weight:600;
-}
-
-.footer a:hover{
-text-decoration:underline;
-}
-
-/* RISK */
-
-.risk{
-margin-top:10px;
-font-size:11px;
-opacity:0.5;
-}
-
+.adrank a:hover{text-decoration: underline;}
 </style>
-</head>
 
-<body>
-
-<div class="container">
-
-<img src="image.png" class="logo">
-
-<h1>CA NITIN MURAR</h1>
-<h2>NIFTY • BANKNIFTY • OPTIONS</h2>
-
-<p class="sub">
-Daily Intraday Trading Signals & Analysis
-</p>
-
-<!-- TOP BUTTON -->
-<a href="https://t.me/+JBT2ZqM7YvQyZmJl" class="btn">
-JOIN OUR TEAM
-</a>
-
-<div class="trust">
-✔ Trusted by 5,000+ Traders <br>
-✔ Daily Consistent Setups
-</div>
-
-<ul class="points">
-<li>✔ 5–7 High Probability Trades</li>
-<li>✔ Exact Entry, SL & Target</li>
-<li>✔ Beginner Friendly Guidance</li>
-<li>✔ Live Market Updates</li>
-</ul>
-
-<!-- BOTTOM BUTTON -->
-<a href="https://t.me/+JBT2ZqM7YvQyZmJl" class="btn">
-  JOIN OUR TEAM
-</a>
-
-<div class="timer">
-⏳ Free Access Closing Soon
-</div>
-
-<div class="proof">
-📈 Limited Seats • Active Community
-</div>
-
-<p class="risk">
-⚠ Market investments are subject to risk
-</p>
-
-<!-- CLEAN FOOTER -->
-<div class="footer">
-Powered by 
-<a href="#" target="_blank">
-Shivi Ad Angency
-</a>
-</div>
-</div>
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -227,12 +156,45 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '2618724648543538');
+fbq('init', '3582042455284876');
 fbq('track', 'PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=2618724648543538&ev=PageView&noscript=1"
+src="https://www.facebook.com/tr?id=3582042455284876&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
+</head>
+<body>
+  <div class="card">
+    <div class="avatar">
+      <img src="image.png" alt="Zero To Hero Logo">
+    </div>
+    <div class="headline">CA NITIN MURAR</div>
+    <div class="subhead">India's Most Trusted Options Trading Channel</div>
+    <div class="features">
+      <div class="feat">
+        <div class="tick">&#10003;</div>
+        <p>Nifty, BankNifty &amp; Options calls with 90% accuracy</p>
+      </div>
+      <div class="feat">
+        <div class="tick">&#10003;</div>
+        <p>1:4 Risk Reward Ratio &bull; Daily 2-3 calls</p>
+      </div>
+      <div class="feat">
+        <div class="tick">&#10003;</div>
+        <p>Target 100+ Points Daily &bull; Most Trusted Channel</p>
+      </div>
+    </div>
+    <a class="btn" href="https://t.me/+JBT2ZqM7YvQyZmJl" target="_blank">
+      JOIN OUR TEAM 🚀
+    </a>
+    <hr class="divider">
+    <div class="disclaimer">
+      <b>Disclaimer:</b> Educational content only. Not SEBI registered. Trading involves risk. Past performance is not indicative of future results.
+    </div>
+    <div class="adrank">
+      Advertised By <a href="#" target="_blank">Shivi ad Angency</a>
+    </div>
+  </div>
 </body>
 </html>
